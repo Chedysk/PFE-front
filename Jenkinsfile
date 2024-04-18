@@ -46,5 +46,10 @@ pipeline {
                 ansiblePlaybook installation: 'Ansible', inventory: 'hosts', playbook: 'deploy.yaml', vaultTmpPath: ''
             }
         }
+        stage('Notify Slack') {
+            steps {
+                slackSend channel: '#pfe', color: 'good', message: 'Test and deployment of the frontend completed successfully'
+            }
+        }
     }
 }

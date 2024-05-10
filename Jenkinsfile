@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'master', credentialsId: 'git-cred', url: 'https://github.com/Chedysk/PFE-Frontend.git'
+                git branch: 'master', credentialsId: 'git-cred', url: 'https://github.com/Chedysk/PFE-front.git'
             }
         }
         stage('Build Angular') {

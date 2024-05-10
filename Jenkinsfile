@@ -29,14 +29,14 @@ pipeline {
         }
         stage('Build Docker Image - Frontend') {
             steps {
-                sh 'docker build -t chedysk/frontend .'
+                sh 'docker build -t chedysk/front .'
             }
         }
         stage('Push Docker Image - Frontend') {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'chedysk-dockerhub') {
-                        sh 'docker push chedysk/frontend'
+                        sh 'docker push chedysk/front'
                     }
                 }
             }

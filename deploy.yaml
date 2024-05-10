@@ -5,7 +5,7 @@
     - name: Copy YAML files from local machine to master machine
       copy:
         src: "front.yaml"
-        dest: "/home/kmaster/front.yaml"
+        dest: "/home/master/front.yaml"
 
     - name: Apply YAML files on master machine
-      command: kubectl apply -f "/home/kmaster/front.yaml"
+      command: kubectl apply -f "/home/master/front.yaml"

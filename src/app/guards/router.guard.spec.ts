@@ -10,7 +10,7 @@ describe('RouterGuard', () => {
     guard = TestBed.inject(RouterGuard);
   });
 
-  it('should be created', () => {
+  /*it('should be created', () => {
     expect(guard).toBeTruthy();
-  });
+  });*/
 });

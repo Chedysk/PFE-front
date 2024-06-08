@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: front-dep
-          image: chedysk/frontend
+          image: chedysk/front
           ports:
             - containerPort: 4200
 

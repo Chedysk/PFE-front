@@ -16,18 +16,18 @@ export class AddcourseComponent implements OnInit {
 
   constructor(private _professorService : ProfessorService, private _router : Router) { }
 
-  ngOnInit(): void 
+  ngOnInit(): void
   {
     $("#websitelink, #youtubelink").css("display","none");
     $("#websitelink").hide();
-    
+
     $("select").on('change', function() {
       $(this).find("option:selected").each(function() {
           var option = $(this).attr("value");
           if(option === "Website") {
             $("#websitelink").css("display","block");
             $("#youtubelink").css("display","none");
-          } 
+          }
           else if(option === "Youtube")
           {
             $("#youtubelink").css("display","block");
@@ -53,3 +53,4 @@ export class AddcourseComponent implements OnInit {
   }
 
 }
+/*demo*/

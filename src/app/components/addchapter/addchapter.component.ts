@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms'  
+import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms'
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Chapter } from 'src/app/models/chapter';
@@ -16,9 +16,9 @@ export class AddchapterComponent implements OnInit {
 
   chapter = new Chapter();
   coursenames : Observable<Course[]> | undefined;
-     
-  constructor(private _router : Router, private _service : ProfessorService) {}  
-    
+
+  constructor(private _router : Router, private _service : ProfessorService) {}
+
   ngOnInit() {
 
     this.coursenames = this._service.getCourseListNames();
@@ -90,7 +90,7 @@ export class AddchapterComponent implements OnInit {
       $('#chapter8nametxt, #chapter8idtxt').val('');
       $("#chapter7btn,#remove7btn").show();
     });
-    
+
   }
 
   addChapters()
@@ -108,3 +108,4 @@ export class AddchapterComponent implements OnInit {
   }
 
 }
+/*demo*/
